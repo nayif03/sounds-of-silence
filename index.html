@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sound of silence</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Baskerville" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <div>
+      <select id="select" onclick="myTrackList.filterBySelect()">
+        <option value="">choose a filter ..</option>
+        <option value="price">sort by Price</option>
+        <option value="name">sort by Name</option>
+        <option value="artist">sort by Artist's Name</option>
+      </select>
+    </div>
+    <div>
+      <label for="artistname"><span>search for artist:</span></label>
+      <input type="text" id="artistName" onkeyup="chooseArtist();" placeholder="enter your favorite artist">
+    </div>
+    <div>
+      <label for="input"><span>Filter :</span></label>
+      <input type="text" value="" onkeyup="myTrackList.filter()" id="input" placeholder="enter your favorite song or artist ..">
+    </div>
+    
+  </div>
+  <div id="tracks"></div>
+  <script src="./assets/music.js"></script>
+  <script src="./assets/main.js"></script>
+
+</body>
+
+</html>
